@@ -4,8 +4,8 @@
 			<h1 class="text-center">{{title}}</h1>
 			<h5 class="text-center">Powered by Angular</h5>
 		</div>
-		<div class="col-sm-4">
-			<div class="alert alert-success alert-dismissable" *ngIf="msg">
+		<div class="col-sm-12">
+			<div class="text-center alert alert-success alert-dismissable" *ngIf="msg">
 				<a href="#" class="close" (click)="closeAlert()">
 					&times;
 				</a>
@@ -17,6 +17,7 @@
 		<div class="col-sm-4">
 			<img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 		</div>
+		<!-- create new farm -->
 		<div class="col-sm-8">
 			<h2>Create new farm:</h2>
 			<form class="form-horizontal">
@@ -74,13 +75,15 @@
 		</div>
 	<div class="row">
 	  <div class="col-sm-6">
-	  	<h2>List of farms: </h2>
-	  	<table class="table table bordered">
+	  	<h2>List of farms:</h2>
+	  	<table class="table table-bordered">
 	  	  <thead>
 	  	    <tr>
 	  	    <th>Id</th>
 	  	    <th>RENSPA</th>
-	  	    <th>Name</th>
+					<th>Name</th>
+					<th>Edit farm</th>
+					<th>Delete farm</th>
 	  	    </tr>
 	  	  </thead>
 	  	  <tbody>
@@ -102,7 +105,8 @@
 	  	  </tbody>
 	  	</table>
 	  </div>
-	<div class="col-sm-6" [hidden]="hideUpdate">
+		<!-- update farm -->
+		<div class="col-sm-6" [hidden]="hideUpdate">
 			<h2>Update farm:</h2>
 			<form class="form-horizontal">
 				
